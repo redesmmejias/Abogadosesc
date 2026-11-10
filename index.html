@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-opt="1">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="Cataldo del Río es una firma multidisciplinaria que integra el Derecho y la contabilidad en una misma organización. Tributario, corporativo, inmobiliario, litigios y arbitrajes, contabilidad y auditoría.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
   color-scheme: light;
@@ -26,6 +26,8 @@
   --accent:#8C6230;
   --accent-soft:#F0E7DC;
 
+  --on-dark:#FFFFFF;
+  --on-dark-2:#B7C8C7;
   --maxw:1140px;
   --gutter:24px;
 }
@@ -157,7 +159,7 @@ textarea{min-height:132px;resize:vertical}
 .cdata .v{font-size:16px;color:var(--ink-2);margin-top:5px}
 
 /* ---------- pie ---------- */
-footer.site{background:var(--ink);color:#B7C8C7}
+footer.site{background:var(--ink);color:var(--on-dark-2)}
 footer.site .wrap{padding-block:56px;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
 footer.site h4{color:#fff;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;margin-bottom:14px}
 footer.site p,footer.site li{font-size:14.5px;line-height:1.7}
@@ -195,9 +197,196 @@ footer.site ul{list-style:none;display:grid;gap:6px}
   footer.site .wrap{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ================= OPCIÓN 2 · PIEDRA ================= */
+/* Paleta tomada de la tarjeta de visita: #D6D6CC y #4C4D4F */
+:root[data-opt="2"]{
+  --serif:"Bodoni Moda",Didot,"Times New Roman",serif;
+  --ink:#2B2C2D;
+  --ink-2:#55565A;
+  --ink-3:#85867F;
+  --paper:#D6D6CC;
+  --surface:#E4E4DC;
+  --surface-2:#CBCBC0;
+  --line:#BDBDB1;
+  --line-2:#A7A79A;
+  --accent:#4C4D4F;
+  --accent-soft:#CDCDC2;
+  --on-dark:#EFEFE8;
+  --on-dark-2:#B6B6AB;
+}
+:root[data-opt="2"] h1,:root[data-opt="2"] h2,
+:root[data-opt="2"] h3,:root[data-opt="2"] h4{font-weight:400;letter-spacing:-.01em}
+:root[data-opt="2"] h2.sec{font-weight:400}
+:root[data-opt="2"] .eyebrow{color:var(--ink-2)}
+:root[data-opt="2"] nav.main button{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+:root[data-opt="2"] .btn{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase}
+:root[data-opt="2"] .areacard .k,:root[data-opt="2"] .area .idx{color:var(--ink-3)}
+
+/* barra selectora de opción */
+.optbar{background:#1D1E1F;color:#C9C9C0}
+.optbar .wrap{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding-block:9px;
+  padding-top:calc(9px + env(safe-area-inset-top,0px))}
+.optbar .lab{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:#85867F}
+.optbar .set{display:flex;gap:7px;flex-wrap:wrap}
+.optbar button{font:inherit;font-family:var(--mono);font-size:11px;letter-spacing:.1em;cursor:pointer;
+  border:1px solid #3C3D3E;background:transparent;color:#C9C9C0;padding:5px 13px}
+.optbar button[aria-pressed="true"]{background:#E4E4DC;color:#1D1E1F;border-color:#E4E4DC}
+.optbar .extlink{margin-left:auto;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;
+  color:#9A9B92;border:1px solid #3C3D3E;padding:5px 12px;text-decoration:none;white-space:nowrap}
+.optbar .extlink:hover{color:#E4E4DC;border-color:#6A6B66}
+
+/* marca de la tarjeta: C sobre dR */
+.brand2{display:flex;align-items:center;gap:15px;flex:0 0 auto}
+.cdr{display:grid;justify-items:end;line-height:.82;font-family:var(--mono);color:var(--ink);flex:0 0 auto}
+.cdr .c{font-size:23px}
+.cdr .bar{display:block;width:30px;height:3.5px;background:var(--ink);margin-block:3px}
+.cdr .dr{font-size:23px;letter-spacing:-.01em}
+.brand2 .wm2{display:grid;gap:5px;font-family:var(--mono);line-height:1}
+.brand2 .wm2 b{font-size:12.5px;font-weight:500;letter-spacing:.2em;color:var(--ink)}
+.brand2 .wm2 i{font-style:normal;font-size:8.5px;letter-spacing:.26em;color:var(--ink-3)}
+
+/* portada por capítulos */
+#home-o2{background:var(--paper)}
+.chap{position:relative;overflow:hidden;background:var(--paper);border-bottom:1px solid var(--line)}
+.chap .tex{position:absolute;inset:0;
+  background:
+    repeating-radial-gradient(ellipse 150% 92% at 14% 118%, rgba(76,77,79,.11) 0 2px, transparent 2px 17px),
+    radial-gradient(120% 95% at 88% 4%, rgba(76,77,79,.09), transparent 64%);}
+.track{display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.slide{flex:0 0 100%;min-width:100%}
+.slide .inner{max-width:var(--maxw);margin:0 auto;padding-inline:clamp(46px,7vw,86px);
+  min-height:clamp(430px,68vh,620px);display:flex;flex-direction:column;justify-content:center;padding-block:62px;position:relative}
+.slide .num{font-family:var(--mono);font-size:21px;letter-spacing:.04em;color:var(--ink)}
+.slide hr{border:0;height:1.5px;background:var(--ink);margin:13px 0 20px;max-width:430px}
+.slide h2{font-family:var(--serif);font-size:clamp(34px,5.6vw,64px);line-height:1.04;color:var(--ink);letter-spacing:-.015em}
+.slide h2 .lt{display:block;font-weight:400}
+.slide h2 .bd{display:block;font-weight:700}
+.slide .sect{font-family:var(--mono);font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-2);margin-top:20px}
+.slide .txt{margin-top:22px;max-width:46ch;font-size:16px;color:var(--ink-2);line-height:1.6}
+.slide .go{margin-top:28px;display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:4px;cursor:pointer;background:none;border-top:0;border-left:0;border-right:0;align-self:flex-start}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;background:none;border:0;cursor:pointer;
+  font-family:var(--mono);font-size:27px;line-height:1;color:var(--ink);opacity:.5;padding:10px 14px}
+.arrow:hover{opacity:1}
+.arrow.prev{left:4px}
+.arrow.next{right:4px}
+.dots{position:absolute;bottom:22px;left:0;right:0;display:flex;justify-content:center;gap:9px;z-index:3}
+.dots button{width:30px;height:2px;border:0;padding:0;cursor:pointer;background:var(--line-2)}
+.dots button[aria-current="true"]{background:var(--ink)}
+.mono-mark{position:absolute;right:clamp(16px,3vw,34px);bottom:22px;z-index:3;font-family:var(--mono);
+  font-size:11px;letter-spacing:.2em;color:var(--ink-3)}
+
+@media (max-width:760px){
+  .slide .inner{padding-inline:40px;min-height:0;padding-block:52px}
+  .arrow{font-size:21px;padding:8px 6px}
+  .slide hr{max-width:200px}
+  .mono-mark{display:none}
+  .brand2 .wm2 b{font-size:10.5px;letter-spacing:.15em}
+  .cdr .c,.cdr .dr{font-size:19px}
+  .cdr .bar{width:25px}
+}
+
+/* ================= OPCIÓN 3 · FRACCIÓN ================= */
+/* El logotipo es una fracción: C sobre la barra sobre dR.
+   Esta opción convierte esa barra en la estructura del sitio. */
+:root[data-opt="3"]{
+  --serif:"Familjen Grotesk",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --ink:#16182B;
+  --ink-2:#4F5270;
+  --ink-3:#8A8DA4;
+  --paper:#ECE8E1;
+  --surface:#F7F5F1;
+  --surface-2:#DFDBD2;
+  --line:#CFCBC2;
+  --line-2:#B5B1A7;
+  --accent:#2F43E8;
+  --accent-soft:#E1E4FC;
+  --on-dark:#FFFFFF;
+  --on-dark-2:#A8ACCB;
+}
+:root[data-opt="3"] h1,:root[data-opt="3"] h2,
+:root[data-opt="3"] h3,:root[data-opt="3"] h4{font-weight:600;letter-spacing:-.025em}
+:root[data-opt="3"] h2.sec{font-weight:600}
+:root[data-opt="3"] nav.main button{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+:root[data-opt="3"] .btn{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+:root[data-opt="3"] .area h3,:root[data-opt="3"] .person h3,:root[data-opt="3"] .areacard h3{letter-spacing:-.02em}
+
+/* conmutación de portadas y marcas */
+#home-o2,#home-o3,.brand2,.brand3{display:none}
+:root[data-opt="2"] #home-o1,:root[data-opt="3"] #home-o1{display:none}
+:root[data-opt="2"] #home-o2{display:block}
+:root[data-opt="3"] #home-o3{display:block}
+:root[data-opt="2"] .brand1,:root[data-opt="3"] .brand1{display:none}
+:root[data-opt="2"] .brand2{display:flex}
+:root[data-opt="3"] .brand3{display:flex}
+
+/* marca de la opción 3 */
+.brand3{align-items:center;gap:14px;flex:0 0 auto}
+.cdr3{display:grid;justify-items:center;line-height:.85;font-family:var(--mono);color:var(--ink);flex:0 0 auto}
+.cdr3 .c{font-size:19px}
+.cdr3 .bar{display:block;width:34px;height:4px;background:var(--accent);margin-block:3px}
+.cdr3 .dr{font-size:19px}
+.brand3 .wm3{display:grid;gap:5px;line-height:1}
+.brand3 .wm3 b{font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:-.02em;color:var(--ink)}
+.brand3 .wm3 i{font-style:normal;font-family:var(--mono);font-size:8.5px;letter-spacing:.22em;color:var(--ink-3)}
+
+/* portada: la fracción */
+.frac{background:var(--paper)}
+.frac .half{display:flex;align-items:center}
+.frac .half.top{background:var(--ink);color:#fff;min-height:clamp(190px,27vh,270px)}
+.frac .half.bot{background:var(--paper);color:var(--ink);min-height:clamp(190px,27vh,270px)}
+.frac .tag{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:14px}
+.frac .half.top .tag{color:#9EA3D4}
+.frac .half.bot .tag{color:var(--ink-3)}
+.frac .big{font-family:var(--serif);font-size:clamp(38px,8.2vw,104px);font-weight:600;line-height:.95;letter-spacing:-.035em}
+.frac .half.top .big{color:#fff}
+.fbar{background:var(--accent);height:auto;display:flex;align-items:center;justify-content:center;padding-block:11px}
+.fbar span{font-family:var(--mono);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#fff}
+
+/* índice de áreas con la marca de fracción */
+.fidx{border-top:1px solid var(--line)}
+.frow{display:grid;grid-template-columns:52px 34px minmax(0,1fr) auto;gap:22px;align-items:center;
+  width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);
+  padding-block:26px;cursor:pointer;font:inherit;color:var(--ink)}
+.frow:hover{background:var(--surface)}
+.frow .n{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.frow .nm{font-family:var(--serif);font-size:clamp(20px,2.7vw,31px);font-weight:600;letter-spacing:-.025em}
+.frow .ar{font-family:var(--mono);font-size:15px;color:var(--accent);opacity:0;transition:opacity .2s}
+.frow:hover .ar{opacity:1}
+.fm{display:grid;justify-items:center;gap:3px}
+.fm i{display:block;width:13px;height:13px;border:1.5px solid var(--ink-3);border-radius:50%}
+.fm i.on{background:var(--accent);border-color:var(--accent)}
+.fm .ln{display:block;width:21px;height:1.5px;background:var(--ink-3)}
+.flegend{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center;margin-top:24px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.flegend span{display:inline-flex;align-items:center;gap:8px}
+.flegend b{display:inline-block;width:11px;height:11px;border-radius:50%;border:1.5px solid var(--ink-3)}
+.flegend b.on{background:var(--accent);border-color:var(--accent)}
+
+@media (max-width:760px){
+  .frac .half.top,.frac .half.bot{min-height:0;padding-block:38px}
+  .frow{grid-template-columns:34px 26px minmax(0,1fr);gap:14px;padding-block:20px}
+  .frow .ar{display:none}
+  .fm i{width:11px;height:11px}
+  .fm .ln{width:17px}
+  .brand3 .wm3 b{font-size:16px}
+}
 </style>
 </head>
 <body>
+
+<div class="optbar">
+  <div class="wrap">
+    <span class="lab">Propuestas</span>
+    <div class="set">
+      <button type="button" data-opt="1" aria-pressed="true">1 &middot; Petróleo</button>
+      <button type="button" data-opt="2" aria-pressed="false">2 &middot; Piedra</button>
+      <button type="button" data-opt="3" aria-pressed="false">3 &middot; Fracción</button>
+    </div>
+    <a class="extlink" href="propuesta-inicial.html" target="_blank" rel="noopener" title="Abre la propuesta de septiembre en otra pestaña"><span aria-hidden="true">&#9683;</span> Propuesta inicial &middot; A B C</a>
+  </div>
+</div>
 
 <div class="notice" id="notice">
   <div class="wrap">
@@ -209,7 +398,7 @@ footer.site ul{list-style:none;display:grid;gap:6px}
 
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="#inicio" data-go="home">
+    <a class="brand brand1" href="#inicio" data-go="home">
       <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
         <rect x="0.5" y="0.5" width="35" height="35" fill="none" stroke="#BFC8C3"></rect>
         <rect x="10" y="8" width="4" height="20" fill="#0E2A2D"></rect>
@@ -221,6 +410,14 @@ footer.site ul{list-style:none;display:grid;gap:6px}
         </g>
       </svg>
       <span class="wm"><b>CATALDO DEL RÍO</b><i>DERECHO Y CONTABILIDAD</i></span>
+    </a>
+    <a class="brand2" href="#inicio" data-go="home">
+      <span class="cdr"><span class="c">C</span><span class="bar"></span><span class="dr">dR</span></span>
+      <span class="wm2"><b>CATALDO &mdash; del RIO</b><i>ABOGADOS AUDITORES</i></span>
+    </a>
+    <a class="brand3" href="#inicio" data-go="home">
+      <span class="cdr3"><span class="c">C</span><span class="bar"></span><span class="dr">dR</span></span>
+      <span class="wm3"><b>Cataldo del Río</b><i>ABOGADOS AUDITORES</i></span>
     </a>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">Menú</button>
     <nav class="main" id="nav">
@@ -237,6 +434,177 @@ footer.site ul{list-style:none;display:grid;gap:6px}
 
 <!-- ===================== INICIO ===================== -->
 <div class="page" id="page-home">
+  <div id="home-o2">
+    <div class="chap">
+      <div class="tex"></div>
+      <button class="arrow prev" type="button" id="cPrev" aria-label="Capítulo anterior">&laquo;</button>
+      <button class="arrow next" type="button" id="cNext" aria-label="Capítulo siguiente">&raquo;</button>
+      <div class="track" id="cTrack">
+
+        <section class="slide">
+          <div class="inner">
+            <div class="num">01.</div>
+            <hr>
+            <h2><span class="lt">Una Firma</span><span class="bd">Multidisciplinaria</span></h2>
+            <div class="sect">Quiénes somos</div>
+            <p class="txt">El Derecho y la contabilidad dialogan para ofrecer una comprensión más completa de lo que está en juego.</p>
+            <button class="go" type="button" data-go="firm">Entrar <span aria-hidden="true">&rarr;</span></button>
+          </div>
+        </section>
+
+        <section class="slide">
+          <div class="inner">
+            <div class="num">02.</div>
+            <hr>
+            <h2><span class="lt">Cinco Áreas,</span><span class="bd">Dos Disciplinas</span></h2>
+            <div class="sect">Qué hacemos</div>
+            <p class="txt">Tributario, corporativo, inmobiliario, litigios y arbitrajes, y contabilidad y auditoría, trabajados de manera coordinada.</p>
+            <button class="go" type="button" data-go="areas">Entrar <span aria-hidden="true">&rarr;</span></button>
+          </div>
+        </section>
+
+        <section class="slide">
+          <div class="inner">
+            <div class="num">03.</div>
+            <hr>
+            <h2><span class="lt">El Cuidado</span><span class="bd">del Artesano</span></h2>
+            <div class="sect">Equipo</div>
+            <p class="txt">Estudiamos las particularidades de cada caso, atendemos a los detalles y trabajamos con rigor en cada etapa.</p>
+            <button class="go" type="button" data-go="team">Entrar <span aria-hidden="true">&rarr;</span></button>
+          </div>
+        </section>
+
+        <section class="slide">
+          <div class="inner">
+            <div class="num">04.</div>
+            <hr>
+            <h2><span class="lt">Conversemos</span><span class="bd">Su Asunto</span></h2>
+            <div class="sect">Contacto</div>
+            <p class="txt">Trabajamos junto a empresas, familias y personas, con atención a sus objetivos y a las particularidades de cada encargo.</p>
+            <button class="go" type="button" data-go="contact">Entrar <span aria-hidden="true">&rarr;</span></button>
+          </div>
+        </section>
+
+      </div>
+      <div class="dots" id="cDots">
+        <button type="button" aria-current="true" aria-label="Capítulo 1"></button>
+        <button type="button" aria-label="Capítulo 2"></button>
+        <button type="button" aria-label="Capítulo 3"></button>
+        <button type="button" aria-label="Capítulo 4"></button>
+      </div>
+      <div class="mono-mark">cdr</div>
+    </div>
+
+    <section class="band sm" style="background:var(--surface)">
+      <div class="wrap">
+        <div class="duo">
+          <div>
+            <div class="k">Derecho</div>
+            <h3>Estudio jurídico</h3>
+            <p>A cargo de Rodrigo Cataldo. Asuntos tributarios, corporativos e inmobiliarios, litigios de alta complejidad y arbitrajes.</p>
+          </div>
+          <div>
+            <div class="k">Contabilidad</div>
+            <h3>Contabilidad y auditoría</h3>
+            <p>A cargo de Octavio del Río. Contabilidad, auditoría y apoyo al análisis tributario y a las reorganizaciones empresariales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow">Quiénes somos</div>
+          <h2 class="sec">Una firma multidisciplinaria</h2>
+        </div>
+        <div class="prose">
+          <p>Cataldo del Río nace de la unión del estudio jurídico a cargo de Rodrigo Cataldo y la oficina de contabilidad y auditoría a cargo de Octavio del Río. Somos una firma multidisciplinaria que atiende a sus distintos clientes integrando el Derecho y la contabilidad en una misma organización.</p>
+          <p>La integración del análisis jurídico y contable nos permite comprender las distintas dimensiones de un asunto y abordarlas de manera coordinada. Esta capacidad constituye un atributo diferenciador de nuestra propuesta, especialmente en materias tributarias y reorganizaciones empresariales.</p>
+          <div><a class="btn dark" href="#estudio" data-go="firm">Conocer la firma</a></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="home-o3">
+    <section class="frac">
+      <div class="half top">
+        <div class="wrap"><div class="tag">01 &mdash; Derecho</div><div class="big">Una comprensión</div></div>
+      </div>
+      <div class="fbar"><span>Cataldo del Río</span></div>
+      <div class="half bot">
+        <div class="wrap"><div class="tag">02 &mdash; Contabilidad</div><div class="big">más completa</div></div>
+      </div>
+    </section>
+
+    <section class="band sm" style="background:var(--surface)">
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow">Quiénes somos</div>
+          <h2 class="sec">Dos disciplinas,<br>una organización</h2>
+        </div>
+        <div class="prose">
+          <p>Hay asuntos que requieren considerar más de una perspectiva. En Cataldo del Río, el Derecho y la contabilidad dialogan para ofrecer una comprensión más completa de lo que está en juego.</p>
+          <p>Trabajamos junto a empresas, familias y personas, con atención a sus objetivos y a las particularidades de cada encargo. La dedicación guía nuestra manera de ejercer.</p>
+          <div><a class="btn solid" href="#estudio" data-go="firm">Conocer la firma</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="eyebrow">Qué hacemos</div>
+        <h2 class="sec">Cinco áreas</h2>
+        <div class="flegend">
+          <span><b class="on"></b> Interviene</span>
+          <span><b></b> No interviene</span>
+          <span style="text-transform:none;letter-spacing:.02em">En cada área, el círculo superior es el Derecho y el inferior la contabilidad.</span>
+        </div>
+        <div class="fidx" style="margin-top:26px">
+          <button class="frow" type="button" data-go="areas">
+            <span class="n">01</span>
+            <span class="fm"><i class="on"></i><span class="ln"></span><i class="on"></i></span>
+            <span class="nm">Tributario</span>
+            <span class="ar">&rarr;</span>
+          </button>
+          <button class="frow" type="button" data-go="areas">
+            <span class="n">02</span>
+            <span class="fm"><i class="on"></i><span class="ln"></span><i class="on"></i></span>
+            <span class="nm">Corporativo</span>
+            <span class="ar">&rarr;</span>
+          </button>
+          <button class="frow" type="button" data-go="areas">
+            <span class="n">03</span>
+            <span class="fm"><i class="on"></i><span class="ln"></span><i></i></span>
+            <span class="nm">Inmobiliario</span>
+            <span class="ar">&rarr;</span>
+          </button>
+          <button class="frow" type="button" data-go="areas">
+            <span class="n">04</span>
+            <span class="fm"><i class="on"></i><span class="ln"></span><i></i></span>
+            <span class="nm">Litigios y arbitrajes</span>
+            <span class="ar">&rarr;</span>
+          </button>
+          <button class="frow" type="button" data-go="areas">
+            <span class="n">05</span>
+            <span class="fm"><i></i><span class="ln"></span><i class="on"></i></span>
+            <span class="nm">Contabilidad y auditoría</span>
+            <span class="ar">&rarr;</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="band sm" style="background:var(--ink)">
+      <div class="wrap">
+        <h2 class="sec" style="color:var(--on-dark);margin-top:0;max-width:19ch">Nos inspira el cuidado con que un artesano trabaja su obra.</h2>
+        <p style="color:var(--on-dark-2);margin-top:18px;max-width:58ch">Con esa misma dedicación asumimos cada caso: estudiamos sus particularidades, atendemos a los detalles y trabajamos con rigor en cada etapa.</p>
+      </div>
+    </section>
+  </div>
+
+  <div id="home-o1">
   <section class="hero">
     <div class="ledger"></div>
     <div class="vrule"></div>
@@ -298,12 +666,13 @@ footer.site ul{list-style:none;display:grid;gap:6px}
         <article class="areacard"><div class="k">05</div><h3>Contabilidad y auditoría</h3><p>Servicios contables y de auditoría, con apoyo al análisis tributario y a las operaciones corporativas.</p></article>
         <article class="areacard" style="background:var(--ink);border-color:var(--ink);display:flex;flex-direction:column;justify-content:center">
           <h3 style="color:#fff;margin:0">Nos inspira el cuidado con que un artesano trabaja su obra.</h3>
-          <p style="color:#B7C8C7;margin-top:12px">Con esa misma dedicación asumimos cada caso: estudiamos sus particularidades, atendemos a los detalles y trabajamos con rigor en cada etapa.</p>
+          <p style="color:var(--on-dark-2);margin-top:12px">Con esa misma dedicación asumimos cada caso: estudiamos sus particularidades, atendemos a los detalles y trabajamos con rigor en cada etapa.</p>
         </article>
       </div>
       <div style="margin-top:30px"><a class="btn dark" href="#areas" data-go="areas">Ver el detalle de cada área</a></div>
     </div>
   </section>
+  </div>
 </div>
 
 <!-- ===================== QUIÉNES SOMOS ===================== -->
@@ -634,6 +1003,48 @@ footer.site ul{list-style:none;display:grid;gap:6px}
       var nav = document.getElementById('nav');
       var open = nav.classList.toggle('open');
       burger.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  // ---- selector de propuesta (solo para la presentación) ----
+  var optBtns = document.querySelectorAll('.optbar button');
+  for (var o = 0; o < optBtns.length; o++) {
+    (function(b){
+      b.addEventListener('click', function(){
+        document.documentElement.setAttribute('data-opt', b.getAttribute('data-opt'));
+        for (var q = 0; q < optBtns.length; q++) {
+          optBtns[q].setAttribute('aria-pressed', String(optBtns[q] === b));
+        }
+        window.scrollTo(0, 0);
+      });
+    })(optBtns[o]);
+  }
+
+  // ---- portada por capítulos (opción 2) ----
+  var track = document.getElementById('cTrack');
+  if (track) {
+    var dots = document.getElementById('cDots').querySelectorAll('button');
+    var total = track.children.length;
+    var at = 0;
+    function show(i){
+      at = (i + total) % total;
+      track.style.transform = 'translateX(' + (-at * 100) + '%)';
+      for (var d = 0; d < dots.length; d++) {
+        if (d === at) { dots[d].setAttribute('aria-current','true'); }
+        else { dots[d].removeAttribute('aria-current'); }
+      }
+    }
+    document.getElementById('cPrev').addEventListener('click', function(){ show(at - 1); });
+    document.getElementById('cNext').addEventListener('click', function(){ show(at + 1); });
+    for (var e = 0; e < dots.length; e++) {
+      (function(idx){ dots[idx].addEventListener('click', function(){ show(idx); }); })(e);
+    }
+    document.addEventListener('keydown', function(ev){
+      if (document.documentElement.getAttribute('data-opt') !== '2') { return; }
+      var home = document.getElementById('page-home');
+      if (!home || home.hidden) { return; }
+      if (ev.key === 'ArrowRight') { show(at + 1); }
+      if (ev.key === 'ArrowLeft')  { show(at - 1); }
     });
   }
 
